@@ -13,7 +13,8 @@ const quotes = [
     { text: "It does not matter how slowly you go as long as you do not stop.", author: "Confucius" }
 ];
 // function to get a random quote   
-function getRandomQuote() {
+function generateQuote() {
     const randomIndex = Math.floor(Math.random() * quotes.length);
-    return quotes[randomIndex];
+    document.getElementById("quote").innerText = quotes[randomIndex].text;
+    document.getElementById("author").innerText = `- ${quotes[randomIndex].author}`;
 }
